@@ -5,7 +5,12 @@ import Header from "../../components/header/Header";
 import MailList from "../../components/mailList/MailList";
 import Footer from "../../components/footer/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCircleArrowLeft,
+  faCircleArrowRight,
+  faCircleXmark,
+  faLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
 
 const photos = [
   {
@@ -36,7 +41,24 @@ const Hotel = () => {
       <Navbar />
       <Header type="list" />
       <div className="hotelContainer">
-        {open && <div className="slider"></div>}
+        {open && (
+          <div className="slider">
+            <FontAwesomeIcon
+              icon={faCircleXmark}
+              className="close"
+              onClick={() => setOpen(false)}
+            />
+            <FontAwesomeIcon icon={faCircleArrowLeft} className="arrow" />
+            <div className="sliderWrapper">
+              <img
+                src={photos[slideNumber].src}
+                alt="hotel images"
+                className="sliderImg"
+              />
+            </div>
+            <FontAwesomeIcon icon={faCircleArrowRight} className="arrow" />
+          </div>
+        )}
         <div className="hotelWrapper">
           <button className="bookNow">Reserve or Book Now!</button>
           <h1 className="hotelTitle">Grand Hotel</h1>
@@ -54,7 +76,7 @@ const Hotel = () => {
             {photos.map((photo, index) => (
               <div className="hotelImgWrapper">
                 <img
-                  onClick={handleOpen}
+                  onClick={() => handleOpen(index)}
                   src={photo.src}
                   alt="hotel photos"
                   className="hotelImg"
