@@ -36,6 +36,17 @@ const Hotel = () => {
     setOpen(true);
   };
 
+  const handleMove = (direction) => {
+    let newSlideNumber;
+
+    if (direction === "left") {
+      newSlideNumber = slideNumber === 0 ? 5 : slideNumber - 1;
+    } else {
+      newSlideNumber = slideNumber === 5 ? 0 : slideNumber + 1;
+    }
+    setSlideNumber(newSlideNumber);
+  };
+
   return (
     <div>
       <Navbar />
@@ -48,7 +59,11 @@ const Hotel = () => {
               className="close"
               onClick={() => setOpen(false)}
             />
-            <FontAwesomeIcon icon={faCircleArrowLeft} className="arrow" />
+            <FontAwesomeIcon
+              icon={faCircleArrowLeft}
+              className="arrow"
+              onClick={() => handleMove("left")}
+            />
             <div className="sliderWrapper">
               <img
                 src={photos[slideNumber].src}
@@ -56,7 +71,11 @@ const Hotel = () => {
                 className="sliderImg"
               />
             </div>
-            <FontAwesomeIcon icon={faCircleArrowRight} className="arrow" />
+            <FontAwesomeIcon
+              icon={faCircleArrowRight}
+              className="arrow"
+              onClick={() => handleMove("right")}
+            />
           </div>
         )}
         <div className="hotelWrapper">
