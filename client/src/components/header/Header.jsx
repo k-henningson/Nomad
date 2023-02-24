@@ -15,12 +15,14 @@ import { format } from "date-fns";
 import { useNavigate } from "react-router-dom";
 import "./header.css";
 import { SearchContext } from "../../context/SearchContext";
+import { AuthContext } from "../../context/AuthContext";
 
 const Header = ({ type }) => {
   const [destination, setDestination] = useState("");
   const [openDate, setOpenDate] = useState(false);
   const [openOptions, setOpenOptions] = useState(false);
   const navigate = useNavigate();
+  const {user} = useContext(AuthContext)
 
   const [options, setOptions] = useState({
     adult: 1,
@@ -90,7 +92,7 @@ const Header = ({ type }) => {
               Get rewarded for your travels - unlock instant savings of 10% or
               more with a free NomadBooking account
             </p>
-            <button className="headerBtn">Sign in / Register</button>
+           {!user && <button className="headerBtn">Sign in / Register</button>}
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />
