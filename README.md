@@ -4,26 +4,9 @@ Nomad is a hotel booking app that allows users to easily search and book accommo
 <br></br>
 
 ## Final Product
-!["GIF]()
-!["GIF]()
-!["GIF]()
-!["GIF]()
-<br></br>
 <table>
   <tr>
     <td><img src="https://github.com/k-henningson/Nomad/blob/main/client/docs/Feb%201st%20status.png?raw=true"></td>
-    <td><img src=""></td>
-  </tr>
-  <tr>
-    <td><img src=""></td>
-    <td><img src=""></td>
-  </tr>
-  <tr>
-    <td><img src=""></td>
-    <td><img src=""></td>
-  </tr>
-  <tr>
-    <td><img src=""></td>
     <td><img src=""></td>
   </tr>
 </table>
