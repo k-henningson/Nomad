@@ -4,18 +4,14 @@ Nomad is a hotel booking app that allows users to easily search and book accommo
 <br></br>
 
 ## Final Product
-<table>
-  <tr>
-    <td><img src="https://github.com/k-henningson/Nomad/blob/main/client/docs/LandingPage.png?raw=true"></td>
-    <td><img src="https://github.com/k-henningson/Nomad/blob/main/client/docs/LandingPageCalendar.png?raw=true"></td>
-  </tr>
-   <tr>
-    <td><img src="https://github.com/k-henningson/Nomad/blob/main/client/docs/FeaturedProperties.png?raw=true"></td>
-    <td><img src="https://github.com/k-henningson/Nomad/blob/main/client/docs/SelectedCity.png?raw=true"></td>
-  </tr>
-</table>
+!["Landing Page"](https://github.com/k-henningson/Nomad/blob/main/client/docs/LandingPage.png?raw=true)
 <br></br>
-
+!["Landing Page Calendar"](https://github.com/k-henningson/Nomad/blob/main/client/docs/LandingPageCalendar.png?raw=true)
+<br></br>
+!["Featured Properties"](https://github.com/k-henningson/Nomad/blob/main/client/docs/FeaturedProperties.png?raw=true)
+<br></br>
+!["Selected City"](https://github.com/k-henningson/Nomad/blob/main/client/docs/SelectedCity.png?raw=true)
+<br></br>
 ### Tech Stack
 
 - MongoDB
