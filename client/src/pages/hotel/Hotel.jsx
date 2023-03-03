@@ -23,7 +23,7 @@ const Hotel = () => {
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
 
-  const { data, loading } = useFetch(`/hotels/find${id}`);
+  const { data, loading } = useFetch(`/hotels/find/${id}`);
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
   const [openModal, setOpenModal] = useState(false);
